@@ -1,12 +1,44 @@
+.squareContainer {
+    width: 100%;
+    border: 10px solid green; 
+}
+
 main {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 150px 150px 150px;
     grid-gap: 0px;
+    margin-bottom: 0;
+    position: relative; 
+    perspective: 1000px;
+    opacity: 0; 
+    animation: boxLoad 1.2s linear 0.2s forwards;
+}
 
-    transform: rotate3d(1, 1, 1, 45deg);
+.mainOne {
+    left: 600px; 
+}
+
+.mainTwo {
+    top: -200px;
+    left: 640px; 
+}
+
+.mainThree {
+    top: -400px;
+    left: 670px; 
 }
   
 app-square {
-    border: 1px gray solid;
-    height: 200px;
+    border: 3px gray solid;
+    height: 150px;
+}
+
+@keyframes boxLoad {
+    from {
+    transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 0;
+    } to {
+        transform: rotate3d(3, 1, 0, 70deg);
+        opacity: 1; 
+    }
 }

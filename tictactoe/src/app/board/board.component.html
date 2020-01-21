@@ -8,10 +8,26 @@
 </h2>
 
 
-<main>
-    <app-square 
-        *ngFor="let val of squares; let i = index" 
-        [value]="val"
-        (click)="makeMove(i)"> 
-    </app-square>
-</main>
+<div class="squareContainer">
+    <main class="main mainOne">
+        <app-square 
+            *ngFor="let val of squares; let i = index" 
+            [value]="val"
+            (click)="makeMove(i)"> 
+        </app-square>
+    </main>
+    <main class="main mainTwo">
+        <app-square 
+            *ngFor="let val of squares; let i = index" 
+            [value]="val"
+            (click)="makeMove(i)"> 
+        </app-square>
+    </main>
+    <main class="main mainThree">
+        <app-square 
+            *ngFor="let val of squares; let i = index" 
+            [value]="val"
+            (click)="makeMove(i)"> 
+        </app-square>
+    </main>
+</div>
