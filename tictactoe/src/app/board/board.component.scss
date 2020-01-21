@@ -1,37 +1,36 @@
 .squareContainer {
-    width: 100%;
-    border: 10px solid green; 
+    width: 100%; 
+    main {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-gap: 0px;
+        margin-bottom: 0;
+        position: absolute; 
+        opacity: 0; 
+        animation: boxLoad 1.2s linear 0.2s forwards;
+            app-square {
+            border: 3px gray solid;
+            height: 150px;
+            }
+    }
+    
+    .mainOne {
+        top: 50px; 
+        left: 600px; 
+    }
+    
+    .mainTwo {
+        top: 250px;
+        left: 640px; 
+    }
+    
+    .mainThree {
+        top: 450px;
+        left: 670px; 
+    }
 }
 
-main {
-    display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-gap: 0px;
-    margin-bottom: 0;
-    position: relative; 
-    perspective: 1000px;
-    opacity: 0; 
-    animation: boxLoad 1.2s linear 0.2s forwards;
-}
 
-.mainOne {
-    left: 600px; 
-}
-
-.mainTwo {
-    top: -200px;
-    left: 640px; 
-}
-
-.mainThree {
-    top: -400px;
-    left: 670px; 
-}
-  
-app-square {
-    border: 3px gray solid;
-    height: 150px;
-}
 
 @keyframes boxLoad {
     from {
