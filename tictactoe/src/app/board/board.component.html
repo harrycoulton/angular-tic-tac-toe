@@ -7,27 +7,20 @@
     Player {{ winner }} won the game!
 </h2>
 
-
-<div class="squareContainer">
     <main class="main mainOne">
-        <app-square 
-            *ngFor="let val of squares; let i = index" 
-            [value]="val"
-            (click)="makeMove(i)"> 
-        </app-square>
+        <div class="squareLayer"><app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeMove(i)">
+        </app-square></div>
+        <div class="squareLayer"><app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeMove(i)">
+        </app-square></div>
+        <div class="squareLayer"><app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeMove(i)">
+        </app-square></div>
     </main>
-    <main class="main mainTwo">
-        <app-square 
-            *ngFor="let val of squares; let i = index" 
-            [value]="val"
-            (click)="makeMove(i)"> 
-        </app-square>
-    </main>
-    <main class="main mainThree">
-        <app-square 
-            *ngFor="let val of squares; let i = index" 
-            [value]="val"
-            (click)="makeMove(i)"> 
-        </app-square>
-    </main>
-</div>

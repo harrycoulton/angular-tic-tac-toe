@@ -17,7 +17,7 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-    this.squares = Array(9).fill(null);
+    this.squares = Array(27).fill(null);
     this.winner = null;
     this.xIsNext = true;
   }
@@ -31,12 +31,12 @@ export class BoardComponent implements OnInit {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
-
     this.winner = this.calculateWinner();
   }
 
   calculateWinner() {
     const lines = [
+      // Each layer
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -44,7 +44,43 @@ export class BoardComponent implements OnInit {
       [1, 4, 7],
       [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 6]
+      [2, 4, 6],
+      [9, 10, 11],
+      [12, 13, 14],
+      [15, 16, 17],
+      [9, 12, 15],
+      [10, 13, 16],
+      [11, 14, 17],
+      [9, 13, 17],
+      [11, 13, 15],
+      [18, 19, 20],
+      [21, 22, 23],
+      [24, 25, 26],
+      [18, 21, 24],
+      [19, 22, 25],
+      [20, 23, 26],
+      [18, 22, 26],
+      [20, 22, 24],
+      // Downwards
+      [0, 9, 18],
+      [1, 10, 19],
+      [2, 11, 20],
+      [3, 12, 21],
+      [4, 13, 22],
+      [5, 14, 23],
+      [6, 15, 24],
+      [7, 16, 25],
+      [8, 17, 26],
+      // Diagonal
+      [0, 13, 26],
+      [1, 13, 25],
+      [2, 13, 24],
+      [3, 13, 23],
+      [4, 13, 22],
+      [5, 13, 21],
+      [6, 13, 20],
+      [7, 13, 19],
+      [8, 13, 18]
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];

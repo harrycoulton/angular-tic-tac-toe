@@ -4,30 +4,23 @@
         display: grid;
         grid-template-columns: 150px 150px 150px;
         grid-gap: 0px;
-        margin-bottom: 0;
         position: absolute; 
-        opacity: 0; 
-        animation: boxLoad 1.2s linear 0.2s forwards;
-            app-square {
+        // opacity: 0; 
+        // animation: boxLoad 1.2s linear 0.2s forwards;
+            
+    }
+    
+}
+
+.squareLayer {
+    margin: 30px !important;
+    display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-gap: 0px;
+        app-square {
             border: 3px gray solid;
-            height: 150px;
+            height: 150px; 
             }
-    }
-    
-    .mainOne {
-        top: 50px; 
-        left: 600px; 
-    }
-    
-    .mainTwo {
-        top: 250px;
-        left: 640px; 
-    }
-    
-    .mainThree {
-        top: 450px;
-        left: 670px; 
-    }
 }
 
 
