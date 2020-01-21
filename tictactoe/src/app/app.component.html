@@ -1,4 +1,18 @@
+<nb-layout>
 
+  <nb-layout-header fixed>
+  ULTIMATE TIC-TAC-TOE
+  </nb-layout-header>
 
-<app-square [value]="'X'"></app-square>
-<router-outlet></router-outlet>
+  <nb-layout-column>
+
+    <app-board></app-board>
+    <router-outlet></router-outlet>
+    
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  Disclaimer: This game is utterly ridiculous and not designed for enjoyment, usage, or observation by any carbon-based lifeforms.
+  </nb-layout-footer>
+
+</nb-layout>
