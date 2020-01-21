@@ -71,7 +71,7 @@ export class BoardComponent implements OnInit {
       [6, 15, 24],
       [7, 16, 25],
       [8, 17, 26],
-      // Diagonal
+      // Diagonal across and down
       [0, 13, 26],
       [1, 13, 25],
       [2, 13, 24],
@@ -80,7 +80,21 @@ export class BoardComponent implements OnInit {
       [5, 13, 21],
       [6, 13, 20],
       [7, 13, 19],
-      [8, 13, 18]
+      [8, 13, 18],
+      // Diagonal vertical
+      [0, 12, 24],
+      [1, 13, 25],
+      [2, 14, 26],
+      [6, 12, 18],
+      [7, 13, 19],
+      [8, 14, 20],
+      // Diagonal horizontal
+      [0, 10, 20],
+      [3, 13, 23],
+      [6, 16, 26],
+      [2, 10, 18],
+      [5, 13, 21],
+      [8, 16, 24]
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];

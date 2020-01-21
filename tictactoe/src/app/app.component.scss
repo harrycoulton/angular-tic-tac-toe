@@ -1,0 +1,21 @@
+* {
+    font-family: 'Press Start 2P', cursive !important;
+}
+
+.header {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    position: relative; 
+    top: -400px; 
+    animation: appearIn 1s linear 2s forwards;
+    padding: 50px; 
+}
+
+@keyframes appearIn {
+    from {
+        top: -400px;
+    } to {
+        top: 0;
+    }
+}

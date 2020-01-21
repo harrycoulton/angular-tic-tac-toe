@@ -1,36 +1,115 @@
-.squareContainer {
-    width: 100%; 
-    main {
-        display: grid;
-        grid-template-columns: 150px 150px 150px;
-        grid-gap: 0px;
-        position: absolute; 
-        // opacity: 0; 
-        // animation: boxLoad 1.2s linear 0.2s forwards;
-            
-    }
-    
+* {
+    font-family: 'Press Start 2P', cursive !important;
 }
 
 .squareLayer {
-    margin: 30px !important;
+    position: absolute; 
+    top: -150px; 
+    left: 300px; 
+    animation: boxLoad 1s linear 2s forwards;
+    opacity: 0; 
     display: grid;
-        grid-template-columns: 150px 150px 150px;
-        grid-gap: 0px;
-        app-square {
-            border: 3px gray solid;
-            height: 150px; 
-            }
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 0px;
+    app-square {
+        height: 150px; 
+        border: 3px gray solid;
+        position: relative;
+        }
+    app-square:nth-child(-n+10) {
+        left: 200px;  
+    }
+    app-square:nth-child(n+10) {
+        top: 50px; 
+        left: 220px;  
+    }
+    app-square:nth-child(n+19) {
+        top: 100px; 
+        left: 240px;  
+    }
 }
 
+.sideText {
+    opacity: 0 !important;
+    animation: textLoad 1s linear 2s forwards; 
+}
 
+h2 {
+    position: absolute; 
+    z-index: 10;
+    left: 300px;
+    border: 3px solid black;
+    font-size: 3rem;
+    padding: 30px; 
+    background: #000000b6;
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+        font-family: 'Press Start 2P', cursive !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .squareLayer {
+        position: absolute; 
+        top: 0; 
+        left: 50px; 
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 0px;
+        app-square {
+            height: 100px; 
+            border: 1px gray solid;
+            }
+        app-square:nth-child(-n+10) {
+            left: 50px;  
+        }
+        app-square:nth-child(n+10) {
+            top: 20px; 
+            left: 60px;  
+        }
+        app-square:nth-child(n+19) {
+            top: 40px; 
+            left: 70px;  
+        }
+    }
+    
+    h2 {
+        left: 0;
+        font-size: 0.8rem;
+        padding: 10px; 
+    }
+  }
+
+iframe {
+    height: 1px; 
+    width: 1px; 
+}
 
 @keyframes boxLoad {
     from {
-    transform: rotate3d(0, 0, 0, 0deg);
-    opacity: 0;
+        transform: rotate3d(0, 0, 0, 0deg);
+        opacity: 0;
     } to {
-        transform: rotate3d(3, 1, 0, 70deg);
+        
+        transform: rotate3d(-1, 0, 0, -65deg);
         opacity: 1; 
+    }
+}
+
+@keyframes textLoad {
+    from {
+        transform: rotate3d(-1, 0, 0, -65deg);
+        opacity: 0;
+    } to {
+        transform: rotate3d(0, 0, 0, 0deg);
+        opacity: 1; 
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }

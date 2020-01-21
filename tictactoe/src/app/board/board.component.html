@@ -1,26 +1,20 @@
-<h1>Current Player: {{ player }} </h1>
+<h1 class="sideText">Current Player: {{ player }} </h1>
 
-<button nbButton outline id="newGame" status="danger" (click)="newGame()">Start new Game</button>
+<button class="sideText" nbButton outline id="newGame" status="danger" (click)="newGame()">Start new Game</button>
 
 
 <h2 *ngIf="winner">
     Player {{ winner }} won the game!
 </h2>
 
-    <main class="main mainOne">
-        <div class="squareLayer"><app-square
-        *ngFor="let val of squares; let i = index"
-        [value]="val"
-        (click)="makeMove(i)">
-        </app-square></div>
-        <div class="squareLayer"><app-square
-        *ngFor="let val of squares; let i = index"
-        [value]="val"
-        (click)="makeMove(i)">
-        </app-square></div>
-        <div class="squareLayer"><app-square
-        *ngFor="let val of squares; let i = index"
-        [value]="val"
-        (click)="makeMove(i)">
-        </app-square></div>
-    </main>
+<main class="main mainOne">
+    <div class="squareLayer">
+        <app-square
+            *ngFor="let val of squares; let i = index"
+            [value]="val"
+            (click)="makeMove(i)">
+            </app-square>
+    </div>
+</main>
+
+<iframe width="1200" height="675" src="https://www.youtube.com/embed/3GtToG_j5go?autoplay=1&&start=609" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
